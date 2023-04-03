@@ -103,6 +103,7 @@ function gameEngine() {
     }
     board.appendChild(snakeElement);
   });
+  
   // Display the food
   foodElement = document.createElement("div");
   foodElement.style.gridRowStart = food.y;
@@ -124,7 +125,9 @@ if (hiscore === null) {
 
 window.requestAnimationFrame(main);
 window.addEventListener("keydown", (e) => {
-  inputDir = { x: 0, y: 1 }; // Start the game
+  inputDir = { x: 0, y: 1 };
+
+   // Start the game
   moveSound.play();
   switch (e.key) {
     case "ArrowUp":
